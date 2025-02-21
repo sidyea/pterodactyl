@@ -14,6 +14,7 @@
 		1FD4E2BE2D68DA130089B8F9 /* pterodactylTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD4E2BD2D68DA130089B8F9 /* pterodactylTests.swift */; };
 		1FD4E2C82D68DA130089B8F9 /* pterodactylUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD4E2C72D68DA130089B8F9 /* pterodactylUITests.swift */; };
 		1FD4E2CA2D68DA130089B8F9 /* pterodactylUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD4E2C92D68DA130089B8F9 /* pterodactylUITestsLaunchTests.swift */; };
+		1FD4E2D72D68EF290089B8F9 /* Posting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD4E2D62D68EF290089B8F9 /* Posting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		1FD4E2C32D68DA130089B8F9 /* pterodactylUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pterodactylUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FD4E2C72D68DA130089B8F9 /* pterodactylUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pterodactylUITests.swift; sourceTree = "<group>"; };
 		1FD4E2C92D68DA130089B8F9 /* pterodactylUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pterodactylUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1FD4E2D62D68EF290089B8F9 /* Posting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				1FD4E2AB2D68DA100089B8F9 /* pterodactylApp.swift */,
 				1FD4E2AD2D68DA100089B8F9 /* ContentView.swift */,
+				1FD4E2D62D68EF290089B8F9 /* Posting.swift */,
 				1FD4E2AF2D68DA130089B8F9 /* Assets.xcassets */,
 				1FD4E2B12D68DA130089B8F9 /* pterodactyl.entitlements */,
 				1FD4E2B22D68DA130089B8F9 /* Preview Content */,
@@ -261,6 +264,7 @@
 			files = (
 				1FD4E2AE2D68DA100089B8F9 /* ContentView.swift in Sources */,
 				1FD4E2AC2D68DA100089B8F9 /* pterodactylApp.swift in Sources */,
+				1FD4E2D72D68EF290089B8F9 /* Posting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
