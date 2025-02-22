@@ -13,7 +13,7 @@ struct SummaryExpandableCard: View {
         var body: some View {
             ZStack {
                 if isExpanded {
-                    Color.black.opacity(0.4) // Background dim when expanded
+                    Color.black.opacity(0.0) // Background dim when expanded
                         .ignoresSafeArea()
                         .onTapGesture { isExpanded.toggle()}
                     

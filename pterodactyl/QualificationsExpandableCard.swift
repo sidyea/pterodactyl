@@ -1,14 +1,13 @@
 //
-//  JobDescriptionExpandableCard.swift
+//  QualificationsExpandableCard.swift
 //  pterodactyl
 //
-//  Created by Siddhant Dhanrajani on 21/02/2025.
+//  Created by Siddhant Dhanrajani on 22/02/2025.
 //
 
 import SwiftUI
 
-struct JobDescriptionExpandableCard: View {
-    
+struct QualificationsExpandableCard: View {
     @State private var isExpanded = false
 
     var body: some View {
@@ -40,7 +39,7 @@ struct JobDescriptionExpandableCard: View {
                                 //Spacer()
                                 HStack{
                                     
-                                    Text("Job Description")
+                                    Text("Qualifications Required")
                                         .foregroundColor(.white)
                                         .font(.title.bold())
                                         .transition(.opacity)
@@ -52,7 +51,7 @@ struct JobDescriptionExpandableCard: View {
                             .frame(height:UIScreen.main.bounds.height*0.08)
                         } else {
                             HStack{
-                                Text("Job Description")
+                                Text("Qualifications")
                                     .foregroundColor(.white)
                                     .font(.title2.bold())
 
@@ -89,8 +88,8 @@ struct JobDescriptionExpandableCard: View {
     } //body
 }
 
-struct JobDescriptionExpandableCard_Previews: PreviewProvider {
+struct QualificationsExpandableCard_Previews: PreviewProvider {
     static var previews: some View {
-        JobDescriptionExpandableCard()
+        QualificationsExpandableCard()
     }
 }

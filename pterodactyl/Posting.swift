@@ -18,103 +18,28 @@ struct Posting: View {
             VStack (alignment: .leading){
                 
                 HStack {
-                    Text("Job Title")
-                        .font(.title.bold())
+                    Text("Title")
+                        .font(.subheadline.bold())
                     Spacer()
                 }
                 
                 HStack {
                     Text("Incredible Engineer Intern at Smartpeoples Department")
-                        .font(.subheadline.bold())
+                        .font(.title.bold())
                 }
                 //Spacer()
             }
-            .frame(height:UIScreen.main.bounds.height*0.10)
+            .frame(height:UIScreen.main.bounds.height*0.12)
             .padding()
             
             ScrollView{
                 VStack{
-                    /*RoundedRectangle(cornerRadius: 20)
-                        .fill(.black)
-                        .frame(
-                            width: UIScreen.main.bounds.width*0.98,
-                            height: UIScreen.main.bounds.height*0.20
-                        )
-                        .overlay(
-                            VStack{
-                                Spacer()
-                                HStack{
-                                    Text("Summary")
-                                        .font(.title2.bold())
-                                        .foregroundColor(.white)
-                                    Spacer()
-                                }
-                                Spacer()
-                                HStack{
-                                    Text("This is a description of everything discussed in this job posting.")
-                                        .font(.system(size: 15))
-                                        .foregroundColor(.white)
-                                    Spacer()
-                                }
-                                Spacer()
-                            }
-                                .padding()
-                        )
-                        .shadow(radius: 10, x:0, y:10)*/
+
                     SummaryExpandableCard()
-                }
-                
-                
-                VStack{
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(.black)
-                        .frame(
-                            width: UIScreen.main.bounds.width*0.95,
-                            height: UIScreen.main.bounds.height*0.10
-                        )
-                        .overlay(
-                            VStack{
-                                Spacer()
-                                HStack{
-                                    Text("Job Description")
-                                        .font(.title2.bold())
-                                        .foregroundColor(.white)
-                                    Spacer()
-                                    Image(systemName: "chevron.right")
-                                        .foregroundColor(.white)
-                                }
-                                Spacer()
-                                
-                            }
-                                .padding()
-                        )
-                        .shadow(radius: 10, x:0, y:10)
-                }
-                
-                VStack{
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(.black)
-                        .frame(
-                            width: UIScreen.main.bounds.width*0.95,
-                            height: UIScreen.main.bounds.height*0.10
-                        )
-                        .overlay(
-                            VStack{
-                                Spacer()
-                                HStack{
-                                    Text("Qualifications")
-                                        .font(.title2.bold())
-                                        .foregroundColor(.white)
-                                    Spacer()
-                                    Image(systemName: "chevron.right")
-                                        .foregroundColor(.white)
-                                }
-                                Spacer()
-                                
-                            }
-                                .padding()
-                        )
-                        .shadow(radius: 10, x:0, y:10)
+                    
+                    JobDescriptionExpandableCard()
+                    
+                    QualificationsExpandableCard()
                 }
                 
                 VStack{

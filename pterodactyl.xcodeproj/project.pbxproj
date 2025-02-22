@@ -17,6 +17,7 @@
 		1FD4E2D72D68EF290089B8F9 /* Posting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD4E2D62D68EF290089B8F9 /* Posting.swift */; };
 		1FD4E2D92D692A060089B8F9 /* SummaryExpandableCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD4E2D82D692A060089B8F9 /* SummaryExpandableCard.swift */; };
 		1FD4E2DB2D6939300089B8F9 /* JobDescriptionExpandableCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD4E2DA2D6939300089B8F9 /* JobDescriptionExpandableCard.swift */; };
+		1FD4E2DF2D69575D0089B8F9 /* QualificationsExpandableCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD4E2DE2D69575D0089B8F9 /* QualificationsExpandableCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		1FD4E2D62D68EF290089B8F9 /* Posting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posting.swift; sourceTree = "<group>"; };
 		1FD4E2D82D692A060089B8F9 /* SummaryExpandableCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryExpandableCard.swift; sourceTree = "<group>"; };
 		1FD4E2DA2D6939300089B8F9 /* JobDescriptionExpandableCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDescriptionExpandableCard.swift; sourceTree = "<group>"; };
+		1FD4E2DE2D69575D0089B8F9 /* QualificationsExpandableCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QualificationsExpandableCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				1FD4E2D62D68EF290089B8F9 /* Posting.swift */,
 				1FD4E2DA2D6939300089B8F9 /* JobDescriptionExpandableCard.swift */,
 				1FD4E2D82D692A060089B8F9 /* SummaryExpandableCard.swift */,
+				1FD4E2DE2D69575D0089B8F9 /* QualificationsExpandableCard.swift */,
 				1FD4E2AF2D68DA130089B8F9 /* Assets.xcassets */,
 				1FD4E2B12D68DA130089B8F9 /* pterodactyl.entitlements */,
 				1FD4E2B22D68DA130089B8F9 /* Preview Content */,
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FD4E2AE2D68DA100089B8F9 /* ContentView.swift in Sources */,
+				1FD4E2DF2D69575D0089B8F9 /* QualificationsExpandableCard.swift in Sources */,
 				1FD4E2AC2D68DA100089B8F9 /* pterodactylApp.swift in Sources */,
 				1FD4E2D92D692A060089B8F9 /* SummaryExpandableCard.swift in Sources */,
 				1FD4E2DB2D6939300089B8F9 /* JobDescriptionExpandableCard.swift in Sources */,
