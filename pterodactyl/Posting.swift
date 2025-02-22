@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct Posting: View {
+    @State private var isExpanded = false
+    @State private var navigate = false  // Controls navigation
+    
     var body: some View {
         
         VStack {
+            // Title Z Stack
             VStack (alignment: .leading){
                 
                 HStack {
@@ -23,131 +27,166 @@ struct Posting: View {
                     Text("Incredible Engineer Intern at Smartpeoples Department")
                         .font(.subheadline.bold())
                 }
-                
+                //Spacer()
             }
+            .frame(height:UIScreen.main.bounds.height*0.10)
             .padding()
             
-            RoundedRectangle(cornerRadius: 10)
-                .fill(Color.black)
-                .shadow(color: .gray, radius: 10, x: 0, y: 8)
-                .frame(
-                    width:UIScreen.main.bounds.width*0.92,
-                    height:UIScreen.main.bounds.height*0.20
-                )
-                .overlay{
-                    VStack (alignment: .leading){
-                        HStack {
-                            Text("Summary")
-                                .foregroundStyle(Color.white)
-                                .font(.title2.bold())
-                            Spacer()
-                        }
-                        
-                        Spacer()
-                        
-                        HStack {
-                            Text("This is an AI generated summary of the job. It has a first line over here. It has a second line here. This is followed by a third line over here. Theres also some space for certain other details ")
-                                .foregroundStyle(Color.white)
-                                .font(.system(size: 15))
-                        }
-                        
-                        Spacer()
-                        
-                    }
-                    .padding()
-                }
-            
-            // Job Description ---------------------------
-            RoundedRectangle(cornerRadius: 10)
-                .fill(Color.black)
-                .shadow(color: .gray, radius: 10, x: 0, y: 8)
-                .frame(
-                    width:UIScreen.main.bounds.width*0.92,
-                    height:UIScreen.main.bounds.height*0.10
-                )
-                .overlay{
-                    VStack {
-                        HStack {
-                            Text("Job Description")
-                                .foregroundStyle(Color.white)
-                                .font(.title2.bold())
-                            Spacer()
-                        }
-                    }
-                    .padding()
-                }
-            
-            // Qualifications ---------------------------
-            RoundedRectangle(cornerRadius: 10)
-                .fill(Color.black)
-                .shadow(color: .gray, radius: 10, x: 0, y: 8)
-                .frame(
-                    width:UIScreen.main.bounds.width*0.92,
-                    height:UIScreen.main.bounds.height*0.10
-                )
-                .overlay{
-                    VStack {
-                        HStack {
-                            Text("Qualifications")
-                                .foregroundStyle(Color.white)
-                                .font(.title2.bold())
-                            Spacer()
-                        }
-                    }
-                    .padding()
-                }
-            Spacer()
-            // Apply / Save  ---------------------------
-            HStack {
-                Spacer()
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color.green)
-                    .shadow(color: .gray, radius: 10, x: 0, y: 8)
-                    .frame(
-                        width:UIScreen.main.bounds.width*0.40,
-                        height:UIScreen.main.bounds.height*0.10
-                    )
-                    .overlay{
-                        VStack {
-                            HStack {
-                                Text("Apply")
-                                    .foregroundStyle(Color.white)
-                                    .font(.title2.bold())
-                                
+            ScrollView{
+                VStack{
+                    /*RoundedRectangle(cornerRadius: 20)
+                        .fill(.black)
+                        .frame(
+                            width: UIScreen.main.bounds.width*0.98,
+                            height: UIScreen.main.bounds.height*0.20
+                        )
+                        .overlay(
+                            VStack{
+                                Spacer()
+                                HStack{
+                                    Text("Summary")
+                                        .font(.title2.bold())
+                                        .foregroundColor(.white)
+                                    Spacer()
+                                }
+                                Spacer()
+                                HStack{
+                                    Text("This is a description of everything discussed in this job posting.")
+                                        .font(.system(size: 15))
+                                        .foregroundColor(.white)
+                                    Spacer()
+                                }
+                                Spacer()
                             }
-                        }
-                        .padding()
+                                .padding()
+                        )
+                        .shadow(radius: 10, x:0, y:10)*/
+                    SummaryExpandableCard()
                 }
-                Spacer()
                 
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color.yellow)
-                    .shadow(color: .gray, radius: 10, x: 0, y: 8)
-                    .frame(
-                        width:UIScreen.main.bounds.width*0.40,
-                        height:UIScreen.main.bounds.height*0.10
-                    )
-                    .overlay{
-                        VStack {
-                            HStack {
-                                Text("Save")
-                                    .foregroundStyle(Color.white)
-                                    .font(.title2.bold())
+                
+                VStack{
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(.black)
+                        .frame(
+                            width: UIScreen.main.bounds.width*0.95,
+                            height: UIScreen.main.bounds.height*0.10
+                        )
+                        .overlay(
+                            VStack{
+                                Spacer()
+                                HStack{
+                                    Text("Job Description")
+                                        .font(.title2.bold())
+                                        .foregroundColor(.white)
+                                    Spacer()
+                                    Image(systemName: "chevron.right")
+                                        .foregroundColor(.white)
+                                }
+                                Spacer()
                                 
                             }
-                        }
-                        .padding()
+                                .padding()
+                        )
+                        .shadow(radius: 10, x:0, y:10)
                 }
-                Spacer()
+                
+                VStack{
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(.black)
+                        .frame(
+                            width: UIScreen.main.bounds.width*0.95,
+                            height: UIScreen.main.bounds.height*0.10
+                        )
+                        .overlay(
+                            VStack{
+                                Spacer()
+                                HStack{
+                                    Text("Qualifications")
+                                        .font(.title2.bold())
+                                        .foregroundColor(.white)
+                                    Spacer()
+                                    Image(systemName: "chevron.right")
+                                        .foregroundColor(.white)
+                                }
+                                Spacer()
+                                
+                            }
+                                .padding()
+                        )
+                        .shadow(radius: 10, x:0, y:10)
+                }
+                
+                VStack{
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(.black)
+                        .frame(
+                            width: UIScreen.main.bounds.width*0.95,
+                            height: UIScreen.main.bounds.width*0.8
+                        )
+                        .overlay(
+                            VStack{
+                                VStack {
+                                    HStack{
+                                        Text("Map")
+                                            .font(.title2.bold())
+                                            .foregroundColor(.white)
+                                        Spacer()
+                                    }
+                                    Spacer()
+                                }
+                                .padding()
+                                
+                            }
+                                .padding()
+                        )
+                        .shadow(radius: 10, x:0, y:10)
+                }
+                
+                    
             }
+            .frame(height:UIScreen.main.bounds.height*0.65)
             
-            //Spacer()
             
-        }
+            
+            
+            VStack{
+                HStack{
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(.blue)
+                        .shadow(radius: 10, x:0, y:10)
+                        .overlay{
+                            Button("Apply"){
+                            }
+                        }
+                        .foregroundColor(.white)
+                        .font(.title2.bold())
+                    
+                    
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(.gray)
+                        .shadow(radius: 10, x:0, y:10)
+                        .overlay{
+                            Button("Save"){
+                            }
+                            .foregroundColor(.white)
+                            .font(.title2.bold())
+                            
+                        }
+                }
+                
+            }
+            .frame(
+                width: UIScreen.main.bounds.width*0.98,
+                height: UIScreen.main.bounds.height*0.08
+            )
+            
+            
+        } //ZStack for full body
         
         
-    }
-}
+    } //body
+} //struct
 
 struct Posting_Previews: PreviewProvider {
     static var previews: some View {

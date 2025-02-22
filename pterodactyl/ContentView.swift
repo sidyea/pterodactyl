@@ -9,6 +9,8 @@ struct ContentView: View {
     @State private var selected = "Baseball"
     @State private var id = 1
     
+    @State private var navigate = false  // Controls navigation
+    
     var body: some View {
         VStack {
             Spacer()
@@ -55,6 +57,19 @@ struct ContentView: View {
                 }
             }
             .buttonStyle(.borderedProminent)
+            
+            NavigationStack{
+                    Button("Open New View") {
+                        navigate = true  // Trigger navigation
+                    }
+                    .padding()
+                    .background(Color.red)
+                    .foregroundColor(.black)
+                    .cornerRadius(20)
+                    .navigationDestination(isPresented: $navigate) {
+                        SummaryExpandableCard()
+                    }
+            }
         }
     }
 }
